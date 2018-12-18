@@ -1,4 +1,4 @@
-const TAX=0.08;
+const TAX=0.09;
 const PHONE_PRICE=10;
 const ACCESSORIES_PRICE=2;
 
@@ -6,6 +6,7 @@ const THRESHOLD=34;
 
 var bankAccount = 54;
 var totalPrice;
+
 
 function total_price()
    {
@@ -37,3 +38,5 @@ if(bankAccount >= totalPrice) {
    console.log("Your purchase amount is " + totalPrice);
 }
 else  console.log("You have not enough money for this purchase");
+
+console.log(typeof t);
