@@ -1,12 +1,11 @@
-const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
-const squareList = (arr) => {
-  "use strict";
-
-  const squaredIntegers = arr.filter((i) => i>0 && i % parseInt(i) === 0).map((i) => i*i);
-  
-  return squaredIntegers;
-};
-
-// test your code
-const squaredIntegers = squareList(realNumberArray);
-console.log(squaredIntegers);
+/*const increment = (function() {
+    "use strict";
+    return function increment(number, value = 1) {
+      return number + value;
+    };
+  })();*/
+  function increment(number, value = 1){
+      return number + value;
+  }
+  console.log(increment(5, 2)); // returns 7
+  console.log(increment(5)); // returns 6
