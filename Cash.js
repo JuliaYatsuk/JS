@@ -22,7 +22,7 @@ function checkCashRegister(price, cash, cid) {
                     current=Math.round((current+_cid[i][0])*100)/100;
                     _cid[i][1]=Math.round((_cid[i][1]-_cid[i][0])*100)/100;
               }
-              if(current>0)change.push([CURRENCY[i][1], current]);
+              if(current>0) change.push([CURRENCY[i][1], current]); 
               
        }
 
@@ -31,11 +31,11 @@ function checkCashRegister(price, cash, cid) {
        for (let i =0;i<_cid.length;i++){
               restInCashDraw=Math.round((restInCashDraw+_cid[i][1])*100)/100;
        }
-       if (rest == 0 && restInCashDraw == 0) return console.log({status: "CLOSED", change: cid});
+       if (rest == 0 && restInCashDraw == 0) return {status: "CLOSED", change: cid};
 
-       if (rest != 0) return console.log({status: "INSUFFICIENT_FUNDS", change: []});
+       if (rest != 0) return {status: "INSUFFICIENT_FUNDS", change: []};
        
-       return console.log({status: "OPEN", change: change});
+       return {status: "OPEN", change: change};
        
      }
      
