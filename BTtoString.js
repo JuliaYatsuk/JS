@@ -1,3 +1,5 @@
+/* Binary Tree to String */
+
 class Node {
   constructor(data, left = null, right = null) {
     this.data = data;
